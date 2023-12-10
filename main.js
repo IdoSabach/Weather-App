@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _weather__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./weather */ \"./src/weather.js\");\n\r\n\r\n\r\n(0,_weather__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _weather__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./weather */ \"./src/weather.js\");\n\r\n\r\n\r\n(0,_weather__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\r\n\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _wea
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst apiKey = \"9f434f090aae3ae45437f86f5ecd2a92\";\r\n  const apiUrl =\r\n    \"https://api.openweathermap.org/data/2.5/weather?units=metric&q=yeruham\"\r\n\r\nconst getData = async () => {\r\n  const res = await fetch(apiUrl + `&appid=${apiKey}`);\r\n  let data = await res.json();\r\n\r\n  console.log(data);\r\n\r\n  console.log(data.main.temp);\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getData);\n\n//# sourceURL=webpack://weather-app/./src/weather.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\r\n\r\nconst getData = async () => {\r\n  const apiKey = \"9f434f090aae3ae45437f86f5ecd2a92\";\r\n  const apiUrl =\r\n    \"https://api.openweathermap.org/data/2.5/weather?units=metric&q=yeruham\"\r\n  const res = await fetch(apiUrl + `&appid=${apiKey}`);\r\n  let data = await res.json();\r\n\r\n  console.log(data);\r\n\r\n  console.log(data.main.temp);\r\n\r\n  return data\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getData);\n\n//# sourceURL=webpack://weather-app/./src/weather.js?");
 
 /***/ })
 
