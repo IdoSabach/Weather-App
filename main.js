@@ -10,13 +10,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/UI.js":
+/*!*******************!*\
+  !*** ./src/UI.js ***!
+  \*******************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   view: () => (/* binding */ view)\n/* harmony export */ });\n/* harmony import */ var _weather__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./weather */ \"./src/weather.js\");\n\r\n\r\nfunction view(city) {\r\n  (0,_weather__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(city); // Replace 'London' with the desired city name\r\n}\r\n\r\n\r\n\n\n//# sourceURL=webpack://weather-app/./src/UI.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _weather__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./weather */ \"./src/weather.js\");\n\r\n\r\n\r\n(0,_weather__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\r\n\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _UI__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./UI */ \"./src/UI.js\");\n\r\n\r\n(0,_UI__WEBPACK_IMPORTED_MODULE_0__.view)('london')\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
 
 /***/ }),
 
@@ -26,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _wea
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\r\n\r\nconst getData = async () => {\r\n  const apiKey = \"9f434f090aae3ae45437f86f5ecd2a92\";\r\n  const apiUrl =\r\n    \"https://api.openweathermap.org/data/2.5/weather?units=metric&q=yeruham\"\r\n  const res = await fetch(apiUrl + `&appid=${apiKey}`);\r\n  let data = await res.json();\r\n\r\n  console.log(data);\r\n\r\n  console.log(data.main.temp);\r\n\r\n  return data\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getData);\n\n//# sourceURL=webpack://weather-app/./src/weather.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst getData = async (city) => {\r\n  const apiKey = \"9f434f090aae3ae45437f86f5ecd2a92\";\r\n  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}`;\r\n  const res = await fetch(`${apiUrl}&appid=${apiKey}`, { mode: \"cors\" });\r\n\r\n  if (!res.ok) {\r\n    console.error(`Failed to fetch data. Status: ${res.status}`);\r\n    return;\r\n  }\r\n\r\n  let data = await res.json();\r\n\r\n  const myData = {\r\n    name: data.name,\r\n    temp: data.main.temp,\r\n    wind: data.wind.speed,\r\n    humidity:data.main.humidity,\r\n    feelLike:data.main.feels_like,\r\n  };\r\n\r\n  console.log(myData);\r\n  console.log(data);\r\n  console.log(myData.feelLike);\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getData);\r\n\n\n//# sourceURL=webpack://weather-app/./src/weather.js?");
 
 /***/ })
 
