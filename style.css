@@ -101,3 +101,9 @@ body{
 .footer{
   margin-top: auto;
 }
+
+@media (max-width: 767px) {
+  .input-text{
+    font-size: 24px;
+  }
+}
