@@ -1,4 +1,3 @@
+import { view } from "./UI";
 
-import getData from "./weather";
-
-getData()
+view('london')
