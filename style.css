@@ -73,6 +73,7 @@ body{
   margin-top: 25px;
   font-size: 28px;
   backdrop-filter: blur(2px);
+  border-radius: 12px;
 }
 
 .box-view:hover{
