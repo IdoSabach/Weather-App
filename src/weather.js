@@ -26,6 +26,7 @@ async function getData(city) {
     };
 
     view(myData)
+    // console.log(data)
 
   } catch (error) {
     console.error(error);
