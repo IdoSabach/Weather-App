@@ -8,4 +8,6 @@ submitBtn.addEventListener('click',function(e){
   e.preventDefault()
   const city = form.value
   getData(city)
+
+  form.value = ""
 })

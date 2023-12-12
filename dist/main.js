@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _weather__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./weather */ \"./src/weather.js\");\n\r\n\r\n(0,_weather__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('yeruham')\r\nconst form = document.querySelector('.input-text')\r\nconst submitBtn = document.querySelector('.submit-btn')\r\n\r\nsubmitBtn.addEventListener('click',function(e){\r\n  e.preventDefault()\r\n  const city = form.value\r\n  ;(0,_weather__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(city)\r\n})\r\n\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _weather__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./weather */ \"./src/weather.js\");\n\r\n\r\n(0,_weather__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('yeruham')\r\nconst form = document.querySelector('.input-text')\r\nconst submitBtn = document.querySelector('.submit-btn')\r\n\r\nsubmitBtn.addEventListener('click',function(e){\r\n  e.preventDefault()\r\n  const city = form.value\r\n  ;(0,_weather__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(city)\r\n\r\n  form.value = \"\"\r\n})\r\n\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
 
 /***/ }),
 
