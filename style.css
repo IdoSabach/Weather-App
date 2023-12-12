@@ -15,7 +15,7 @@ body{
   background-size: cover;
   background-position: center;
   position: relative;
-  color: white;
+  /* color: white; */
 }
 .header{
   display: flex;
@@ -62,7 +62,7 @@ body{
 
 #icon-search{
   font-size: 32px;
-  color: white;
+  /* color: white; */
 }
 
 .box-view{
