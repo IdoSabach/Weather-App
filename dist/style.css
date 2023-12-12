@@ -74,6 +74,8 @@ body{
   font-size: 28px;
   backdrop-filter: blur(2px);
   border-radius: 12px;
+  min-width: 300px;
+  min-height: 350px;
 }
 
 .box-view:hover{

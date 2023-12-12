@@ -1,3 +1,11 @@
-import { view } from "./UI";
+import getData from "./weather";
 
-view('london')
+getData('yeruham')
+const form = document.querySelector('.input-text')
+const submitBtn = document.querySelector('.submit-btn')
+
+submitBtn.addEventListener('click',function(e){
+  e.preventDefault()
+  const city = form.value
+  getData(city)
+})
