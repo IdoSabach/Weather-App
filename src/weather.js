@@ -7,7 +7,7 @@ async function getData(city) {
   let myData;
 
   try {
-    const res = await fetch(`${apiUrl}&appid=${apiKey}`, { mode: "cors" });
+    const res = await fetch(`${apiUrl}&appid=${apiKey}`);
 
     if (!res.ok) {
       console.error(`Failed to fetch data. Status: ${res.status}`);
