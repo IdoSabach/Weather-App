@@ -103,6 +103,10 @@ body{
   margin-top: auto;
 }
 
+#clock{
+  font-size: 50px;
+}
+
 @media (max-width: 767px) {
   .input-text{
     font-size: 24px;
