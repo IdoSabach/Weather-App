@@ -107,6 +107,12 @@ body{
   font-size: 50px;
 }
 
+.github{
+  color: aliceblue;
+  background-color: aliceblue;
+  border-radius: 50%;
+}
+
 @media (max-width: 767px) {
   .input-text{
     font-size: 24px;
