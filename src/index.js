@@ -1,4 +1,5 @@
 import getData from './weather'
+// import setTime from './clock'
 import updateClock from './clock'
 
 getData('tel aviv')
@@ -11,8 +12,12 @@ submitBtn.addEventListener('click', function (e) {
   const city = form.value
   getData(city)
 
-  form.value = ''
+  // form.value = ''
 })
 
-setInterval(updateClock, 1000)
+
+setInterval(updateClock, 1000);
 updateClock()
+setInterval(() => getData(form.value), 1000);
+
+
